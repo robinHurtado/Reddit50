@@ -9,9 +9,13 @@ const useStyles = makeStyles((theme) => ({
 
 const ItemSelected = ({ data }) => {
     const classes = useStyles();
+    if (!data.title) {
+        return null;
+    }
 
     return (
         <div className={classes.root}>
+            {data.thumbnail_width && <img src={data.thumbnail} width={data.thumbnail_width} height={data.thumbnail_height} alt={data.thumbnail} />}
             {data.title}
         </div>
     )
