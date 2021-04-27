@@ -67,7 +67,7 @@ function App({ store }) {
   }
 
   useEffect(() => {
-    fetch(`https:www.reddit.com/r/best.json?t=all&show=all&before`)
+    fetch(`https:www.reddit.com/r/subreddit/top.json?t=all`)
       .then(res => res.json())
       .then(
         (result) => {
